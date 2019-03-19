@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+
+    function change(preview){
+      var src = preview.getAttribute("src");
+      var alt = preview.getAttribute("alt");
+
+      document.getElementById("image").style.backgroundImage = "url("+src+")";
+      document.getElementById("image").style.backgroundSize = "388px 325px";
+      document.getElementById("image").style.color = "blue";
+      document.getElementById("image").innerHTML = alt;
+    }
+
+    function unchange(){
+      document.getElementById("image").style.color = "white";
+      document.getElementById("image").style.backgroundColor = "#8e68ff";
+      document.getElementById("image").style.backgroundImage = "";
+      document.getElementById("image").innerHTML = "Hover or tab over/into an image below.";
+    }
+
+
+    // I used Two functions here.  Starter idea at:
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview"  tabindex = "0"
+            alt = "Graphic Design"
+            src = "https://about.canva.com/wp-content/uploads/sites/3/2016/08/logo-tb-1324x0.jpg"
+            onmouseover="change(this)" onmouseleave="unchange()" onfocus = "change(this)"
+     onblur = "unchange()" >
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview"  tabindex = "0"
+            alt = "Apple in my hand"
+            src = "https://upload.wikimedia.org/wikipedia/commons/9/92/95apple.jpeg"
+            onmouseover="change(this)" onmouseleave="unchange()" onfocus = "change(this)"
+     onblur = "unchange()">
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "0"
+            src = "https://marketplace.canva.com/MAC5Gp6gY88/1/0/thumbnail_large-4/canva-yellow-sound-wave-icon-band-logo-MAC5Gp6gY88.jpg"
+            alt = "Sound Perfection Logo"
+            onmouseover="change(this)" onmouseleave="unchange()" onfocus = "change(this)"
+     onblur = "unchange()">
+
+         <img class = "preview" tabindex = "0"
+             src = "https://upload.wikimedia.org/wikipedia/commons/e/eb/STS-118_approaching_ISS.jpg"
+             alt = "Space Ship"
+             onmouseover="change(this)" onmouseleave="unchange()" onfocus = "change(this)"
+      onblur = "unchange()">
+
+          <img class = "preview" tabindex = "0"
+              src = "https://marketplace.canva.com/MAC5E1DwSpU/1/0/thumbnail_large-4/canva-red-with-x-band-logo-MAC5E1DwSpU.jpg"
+              alt = "xylo cadence LOGO"
+              onmouseover="change(this)" onmouseleave="unchange()" onfocus = "change(this)"
+       onblur = "unchange()">
+
+           <img class = "preview" tabindex = "0"
+               src = "https://marketplace.canva.com/MAC4VVkGEvQ/1/0/thumbnail_large-4/canva-black-and-white-modern-band-logo-MAC4VVkGEvQ.jpg"
+               alt = "Black Blondes Logo"
+               onmouseover="change(this)" onmouseleave="unchange()" onfocus = "change(this)"
+        onblur = "unchange()">
+
+</body>
+</html>
